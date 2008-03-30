@@ -1,0 +1,10 @@
+D:\Development\Projects\DotGSM\DotGSM\bin\Debug\DotGSM.dll
+D:\Development\Projects\DotGSM\DotGSM\bin\Debug\DotGSM.pdb
+D:\Development\Projects\DotGSM\DotGSM\obj\Debug\ResolveAssemblyReference.cache
+D:\Development\Projects\DotGSM\DotGSM\obj\Debug\DotGSM.dll
+D:\Development\Projects\DotGSM\DotGSM\obj\Debug\DotGSM.pdb
+D:\Development\Projects\DotGSM\DotGSM\bin\Release\DotGSM.dll
+D:\Development\Projects\DotGSM\DotGSM\bin\Release\DotGSM.pdb
+D:\Development\Projects\DotGSM\DotGSM\obj\Release\ResolveAssemblyReference.cache
+D:\Development\Projects\DotGSM\DotGSM\obj\Release\DotGSM.dll
+D:\Development\Projects\DotGSM\DotGSM\obj\Release\DotGSM.pdb
