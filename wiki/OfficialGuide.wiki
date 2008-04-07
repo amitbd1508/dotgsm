@@ -17,7 +17,15 @@ You can call a static method of DotGSMBuilder class named “Geocoding” for ex
 
 Coordinates coordinates = DotGSMBuilder.Geocoding("Taipei", [ Google API Key ]);
 
+It takes two parameters: address string at first argument and Google API Key at second argument. The return value is an object instance of Coordinates class. The Coordinates class contains two public member valuables which represent latitude and longitude in double format type. 
 
+you can check the sample at the Default.aspx.cs souse file under sub ASP.NET web project in DotGSM source code. A “localhost” Google API Key is used for demo. you should apply for a unique Google API Key to your own web domain to make sure that your code work fine with Google online services. 
+
+For the detailed explanation of Google Geocoding, please check the document from http://code.google.com/apis/maps/documentation/services.html#Geocoding.
+
+= Generate source path of Google Static Maps =
+
+It is the main purpose of this library. 
 
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
