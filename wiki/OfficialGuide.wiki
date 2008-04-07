@@ -11,6 +11,12 @@ DotGSM sub project contains five source files writing in C sharp language which 
 
 To use DotGSM by checking out latest source code, simply add “DotGSM.dll” reference into your project from "Check out folder\DotGSM\bin\Release" and using “Circube.DotGSM” namespace in your source code. Or you can download the latest compiled assembly and reference it from your application directly. 
 
+= Geocoding =
+
+You can call a static method of DotGSMBuilder class named “Geocoding” for extracting latitude and longitude information by giving the address string:
+
+Coordinates coordinates = DotGSMBuilder.Geocoding("Taipei", [ Google API Key ]);
+
 
 
 Add your content here.  Format your content with:
