@@ -1,10 +1,9 @@
-#summary One-sentence summary of this page.
+#summary This document exmplains all the necessary knowledge for using DotGSM.
 #labels Phase-Implementation,Phase-Deploy
 
-= Introduction =
+= Source files =
 
-This document exmplains all the necessary knowledge for using DotGSM.
-
+test
 
 = Details =
 
