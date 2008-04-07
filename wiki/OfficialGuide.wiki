@@ -1,0 +1,14 @@
+#summary One-sentence summary of this page.
+#labels Phase-Implementation,Phase-Deploy
+
+= Introduction =
+
+This document exmplains all the necessary knowledge for using DotGSM.
+
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
