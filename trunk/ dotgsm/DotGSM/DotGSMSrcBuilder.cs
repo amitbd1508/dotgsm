@@ -22,7 +22,7 @@ namespace Circube.DotGSM
         private string m_str_Zoom;
         private MapType m_MT;
         private string m_str_CenterLatitude;
-        private string m_str_CenterLongtitude;
+        private string m_str_CenterLongitude;
         private ArrayList m_al_Markers;
         private bool m_b_AutoAdjust;
 
@@ -34,7 +34,7 @@ namespace Circube.DotGSM
             m_str_Zoom = "12";
             m_MT = MapType.roadmap;
             m_str_CenterLatitude = "0";
-            m_str_CenterLongtitude = "0";
+            m_str_CenterLongitude = "0";
             m_al_Markers = new ArrayList();
             m_b_AutoAdjust = true;
         }
@@ -97,7 +97,7 @@ namespace Circube.DotGSM
             if (Center != null)
             {
                 m_str_CenterLatitude = Center.Latitude.ToString();
-                m_str_CenterLongtitude = Center.Longtitude.ToString();
+                m_str_CenterLongitude = Center.Longitude.ToString();
             }
         }
         public void SetCenter(string Address)
@@ -106,7 +106,7 @@ namespace Circube.DotGSM
             if (l_sc != null)
             {
                 m_str_CenterLatitude = l_sc.m_str_Latitude;
-                m_str_CenterLongtitude = l_sc.m_str_Longtitude;
+                m_str_CenterLongitude = l_sc.m_str_Longitude;
             }
         }
         public void AddMarker(Coordinates Center, MarkerColor color, MarkerSign sign)
@@ -115,7 +115,7 @@ namespace Circube.DotGSM
             l_sb.AppendFormat(
                 "{0},{1},{2}{3}",
                 Center.Latitude.ToString(),
-                Center.Longtitude.ToString(),
+                Center.Longitude.ToString(),
                 color.ToString(),
                 (sign == MarkerSign.none) ? string.Empty : sign.ToString()
             );
@@ -130,7 +130,7 @@ namespace Circube.DotGSM
                 l_sb.AppendFormat(
                     "{0},{1},{2}{3}",
                     l_sc.m_str_Latitude,
-                    l_sc.m_str_Longtitude,
+                    l_sc.m_str_Longitude,
                     color.ToString(),
                     (sign == MarkerSign.none) ? string.Empty : sign.ToString()
                 );
@@ -143,7 +143,7 @@ namespace Circube.DotGSM
             StringCoordinates l_sc = GeocodingRequest(Address, APIKey);
             Coordinates l_c = new Coordinates();
             l_c.Latitude = Convert.ToDouble( l_sc.m_str_Latitude );
-            l_c.Longtitude = Convert.ToDouble(l_sc.m_str_Longtitude);
+            l_c.Longitude = Convert.ToDouble(l_sc.m_str_Longitude);
             return l_c;
         }
         static private StringCoordinates GeocodingRequest(string Address, string APIKey)
@@ -188,7 +188,7 @@ namespace Circube.DotGSM
 
                 l_cs = new StringCoordinates();
                 l_cs.m_str_Latitude = l_stra_Result[2];
-                l_cs.m_str_Longtitude = l_stra_Result[3];
+                l_cs.m_str_Longitude = l_stra_Result[3];
                 return l_cs;
             }
             catch( Exception ex)
@@ -229,7 +229,7 @@ namespace Circube.DotGSM
                 l_sb.AppendFormat(
                     "&center={0},{1}&zoom={2}",
                     m_str_CenterLatitude,
-                    m_str_CenterLongtitude,
+                    m_str_CenterLongitude,
                     m_str_Zoom
                 );
             }
