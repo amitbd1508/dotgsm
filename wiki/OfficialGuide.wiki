@@ -21,7 +21,7 @@ It takes two parameters: address string at first argument and Google API Key at 
 
 = Generate source path of Google Static Maps =
 
-It is the main purpose of this library. 
+It is the main purpose of this library. All the operation 
 
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
