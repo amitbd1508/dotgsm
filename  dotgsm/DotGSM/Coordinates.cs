@@ -5,7 +5,7 @@ namespace Circube.DotGSM
     public class Coordinates
     {
         private double m_d_Latitude;
-        private double m_d_Longtitude;
+        private double m_d_Longitude;
 
         public double Latitude
         {
@@ -23,35 +23,35 @@ namespace Circube.DotGSM
                     m_d_Latitude = value;
             }
         }
-        public double Longtitude
+        public double Longitude
         {
             get
             {
-                return m_d_Longtitude;
+                return m_d_Longitude;
             }
             set
             {
                 if (value > 180)
-                    m_d_Longtitude = 180;
+                    m_d_Longitude = 180;
                 else if (value < -180)
-                    m_d_Longtitude = -180;
+                    m_d_Longitude = -180;
                 else
-                    m_d_Longtitude = value;
+                    m_d_Longitude = value;
             }
         }
         public Coordinates()
         {
         }
-        public Coordinates(double l_d_Latitude, double l_d_Longtitude)
+        public Coordinates(double l_d_Latitude, double l_d_Longitude)
         {
             m_d_Latitude = l_d_Latitude;
-            m_d_Longtitude = l_d_Longtitude;
+            m_d_Longitude = l_d_Longitude;
         }
     }
 
     internal class StringCoordinates
     {
         public string m_str_Latitude;
-        public string m_str_Longtitude;
+        public string m_str_Longitude;
     }
 }

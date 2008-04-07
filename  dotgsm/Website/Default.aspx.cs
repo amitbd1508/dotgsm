@@ -19,7 +19,7 @@ public partial class _Default : System.Web.UI.Page
         Coordinates coordinates = DotGSMBuilder.Geocoding("Taipei", WebConfigurationManager.AppSettings["APIKey"]);
         
         LiteralControl lc = new LiteralControl();
-        lc.Text = "Geocoding test: <br/>Taipei (" + coordinates.Latitude + ", " + coordinates.Longtitude + ")<br/>";
+        lc.Text = "Geocoding test: <br/>Taipei (" + coordinates.Latitude + ", " + coordinates.Longitude + ")<br/>";
         form1.Controls.Add(lc);
 
         // create image tag by using DotGSMSrcBuilder
@@ -27,9 +27,10 @@ public partial class _Default : System.Web.UI.Page
         l_Builder.SetCenter(new Coordinates(25.08000, 121.5600));
         l_Builder.SetMapSize(350, 350);
         l_Builder.SetZoomLevel(10);
+        l_Builder.SetMapType(MapType.roadmap);
         l_Builder.AutoAdjust = false;
         l_Builder.AddMarker(new Coordinates(25.08532, 121.5615), MarkerColor.blue, MarkerSign.c);
-
+        
         form1.Controls.Add(l_Builder.BuildHtmlImage());
     }
 }
