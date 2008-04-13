@@ -24,11 +24,17 @@ It takes two parameters: address string at first argument and Google API Key at 
 It is the main purpose of this library. From the sample code below, you will find out that all operations relate to the object instance of DotGSMBuilder class:
 
 DotGSMBuilder dotgsm = new DotGSMBuilder([ Google API Key ]);
+
 dotgsm.SetCenter(new Coordinates(25.08000, 121.5600));
+
 dotgsm.SetMapSize(350, 350);
+
 dotgsm.SetZoomLevel(10);
+
 dotgsm.SetMapType(MapType.roadmap);
+
 dotgsm.AutoAdjust = false;
+
 dotgsm.AddMarker(new Coordinates(25.08532, 121.5615), MarkerColor.blue, MarkerSign.c);
 
 string image_res = dotgsm.Src;
