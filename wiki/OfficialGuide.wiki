@@ -39,7 +39,16 @@ dotgsm.AddMarker(new Coordinates(25.08532, 121.5615), MarkerColor.blue, MarkerSi
 
 string image_res = dotgsm.Src;
 
+form1.Controls.Add(dotgsm.BuildHtmlImage());
+
 The first step is to create an object instance of DotGSMBuilder class and pass Google API Key as argument. It is really a simple job as showing. Then, by calling the member method of DotGSMBuilder class you can set center, map size, zoom level, may type into the map. On official guide of Google Static Maps, the center and zoom level are optional parameters if you have provided marker information. The DotGSMBuilder keeps the same behavior but it provides an additional control option “AutoAdjust” to let developer decides if program logic should generate center and zoom level information automatically when you have added any marker on the map or not. By assigning "true" to "AutoAdjust" property the DotGSMBuilder will tell Google Static Maps to generate center and zoom level information based on the marker information. However, if you don't provide any marker information, DotGSMBuilder will use default values even you set "AutoAdjust" to true.
+
+For the default value to each property, please reference from below:
+center: 0,0 (latitude, longitude)
+map size: 300, 300 (width, height)
+zoom level: 12
+map type: roadmap
+auto adjust: true
 
 
 
